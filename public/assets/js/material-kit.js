@@ -188,6 +188,17 @@ function debounce(func, wait, immediate) {
     if (immediate && !timeout) func.apply(context, args);
   };
 };
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault()
+
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top-80 ,
+                },
+                200,
+                'linear'
+            )
+        })
 
 var BrowserDetect = {
   init: function() {
