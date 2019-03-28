@@ -25,7 +25,7 @@ if (cluster.isMaster) {
     serverUtils.router(app, __dirname + '/routes');
 
 
-    app.listen(80, () => {
+    app.listen(8080, () => {
         console.log('RONET_PORTFOLIO');
     })
 }
